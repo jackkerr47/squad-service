@@ -1,0 +1,51 @@
+@SquadService_HostAddress = http://localhost:5094
+
+# Weather Forecast (Minimal API example)
+GET {{SquadService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+# Squad Controller Endpoints
+
+# Get all squads
+GET {{SquadService_HostAddress}}/api/squad/
+Accept: application/json
+
+###
+
+# Get squad by ID
+GET {{SquadService_HostAddress}}/api/squad/1
+Accept: application/json
+
+###
+
+# Create a new squad
+POST {{SquadService_HostAddress}}/api/squad/
+Content-Type: application/json
+
+{
+  "id": 0,
+  "name": "Delta Squad",
+  "description": "Special operations unit"
+}
+
+###
+
+# Update a squad
+PUT {{SquadService_HostAddress}}/api/squad/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Alpha Squad Updated",
+  "description": "Elite combat unit - Updated"
+}
+
+###
+
+# Delete a squad
+DELETE {{SquadService_HostAddress}}/api/squad/3
+Accept: application/json
+
+###
